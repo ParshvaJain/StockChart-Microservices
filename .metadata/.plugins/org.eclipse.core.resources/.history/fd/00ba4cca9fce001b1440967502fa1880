@@ -1,0 +1,43 @@
+#Database service
+spring.data.mongodb.uri=mongodb+srv://Parshva:admin123@cluster0.iyvxe.mongodb.net/StockMarket?retryWrites=true&w=majority
+spring.data.mongodb.database=StockMarket
+
+#Apllication service
+spring.application.name=authentication
+server.port=8081
+
+#JWT service
+
+#Email service
+spring.mail.host = smtp.gmail.com
+spring.mail.port = 587
+spring.mail.properties.mail.smtp.starttls.enable = true
+spring.mail.username = pashwab255225@gmail.com
+spring.mail.password = rickrolled18
+spring.mail.properties.mail.smtp.starttls.required = true
+spring.mail.properties.mail.smtp.auth = true
+spring.mail.properties.mail.smtp.connectiontimeout = 5000
+spring.mail.properties.mail.smtp.timeout = 5000
+spring.mail.properties.mail.smtp.writetimeout = 5000
+
+#eureka server
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
+
+server.error.whitelabel.enabled=true
+
+zuul.routes.authentication.path=/authentication/**
+zuul.routes.authentication.url=http://localhost:8081
+
+zuul.routes.company.path=/company/**
+zuul.routes.company.url=http://localhost:8082
+
+zuul.routes.sector.path=/sector/**
+zuul.routes.sector.url=http://localhost:8083
+
+zuul.routes.exchange.path=/exchange/**
+zuul.routes.exchange.url=http://localhost:8084
+
+zuul.routes.excel.path=/excel/**
+zuul.routes.excel.url=http://localhost:8085
+
+server.error.path=/error

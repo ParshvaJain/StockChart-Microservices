@@ -1,0 +1,31 @@
+package com.company;
+
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
+import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import com.company.model.Company;
+import com.company.repository.CompanyRepository;
+
+@ExtendWith(MockitoExtension.class)
+public class CompanyControllerTest {
+	@Mock
+	private CompanyRepository repository;
+	
+	@Test
+	public void savedCompanySuccess() {
+		Company company = new Company();
+		company.setCompanyName("test");
+		company.setCeo("abc");
+		company.setSector("IT");
+		
+		when(repository.save(any(Company.class))).thenReturn(company);
+		Company savedCompany = repository.save(company);
+		
+		MatcherAssert.assertThat(savedCompany.getCeo(), true);
+	}
+	
+}

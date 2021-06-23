@@ -1,0 +1,3 @@
+spring.data.mongodb.uri=mongodb+srv://Parshva:admin123@cluster0.iyvxe.mongodb.net/StockMarket?retryWrites=true&w=majority
+spring.data.mongodb.database=StockMarket
+spring.application.name=parshva
