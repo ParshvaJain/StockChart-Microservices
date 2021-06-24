@@ -1,0 +1,10 @@
+
+Step 1 : In order to access the home page of the hosted website : Type - https://reactapp--service.herokuapp.com/ as the URL.
+
+Step 2 : In order to login as admin : Username : admin test , Password : admin123 and then click on all the functionalities accordingly.
+
+Step 3 : In order to login as user : Username : Parshva Jain , Password : secret123 and then click on all the functionalities accordingly.
+
+Step 4 : In order to generate chart , go to "Compare Company" section when logged in as user and then enter company and select date as 8-June till 18-June in order
+	 to generate the chart.This date restriction is due to non availability of huge data.
+
